@@ -1,0 +1,301 @@
+@media (max-width: 1166px) {
+    .navbar-expand-lg .navbar-nav {
+        font-size: 14px;
+        
+    }
+}
+
+@media (max-width: 767px) {
+    .NewsList li {
+        clear: both;
+        display: table;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .NewsList .NImg {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+    }
+
+    .NewsList .NTitle {
+        display: table-cell;
+        vertical-align: top;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-left: 10px;
+    }
+}
+
+
+@media (max-width: 999px) {
+
+    #Infor,
+    .mobile-fluid {
+        margin-top: 140px;
+    }
+}
+
+@media (max-width: 767px) {
+   
+
+
+    #Infor,
+    .mobile-fluid {
+        margin-top: 140px;
+    }
+}
+
+@media (max-width: 1166px) {
+    .navbar-expand-lg .navbar-nav {
+        font-size: 14px;
+        padding: 10px;
+       
+    }
+}
+
+
+
+
+@media (max-width: 991px) {
+    .items-contact{
+        width: 87%;
+    }
+    .container {
+        width: 100%;
+    }
+    .Search{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .Search a{
+        color: #284f9e !important;
+    }
+    .MenuBottom {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 35%, rgba(210, 225, 255, 1) 100%);
+        margin: 0px -30px;
+        padding: 0 30px;
+    }
+    .navbar-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
+        grid-auto-flow: row !important;
+        justify-items: start;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+     #Header-Bot {
+        top: 0 !important;
+    }
+    #Infor {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .rowMenuBottom {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 35%, rgba(210, 225, 255, 1) 100%);
+        margin: 0px -30px;
+        padding: 0 30px;
+    }
+
+    #menu-top {
+        padding-left: 15px;
+        padding-right: 15px;
+        float: none;
+        color: #fff;
+    }
+
+    #menu-top a {
+        color: #fff;
+    }
+
+    #menu-top a:hover {
+        background-color: #006daf;
+    }
+
+    #SearchBox {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .toolbar {
+        display: none;
+    }
+
+    .header-title {
+        display: block;
+        font-size: 1.4em;
+    }
+
+    .header-logo-top,
+    .logo-header {
+        text-align: center;
+    }
+
+    #header,
+    .text-logo {
+        display: none;
+    }
+
+    .header-logo-top {
+        display: none;
+    }
+
+    #UserBar .iCmd.iHome,
+    #searchIconMenu {
+        display: none;
+    }
+
+    #menu-top .navbar-left a {
+        font-size: 1em;
+    }
+
+   
+
+    /* note*/
+    .navbar-expand-md .navbar-nav {
+        flex-direction: row;
+    }
+
+
+    .navbar-nav {
+        font-size: 14px
+    }
+
+    .header-title .CPic div {
+        max-height: 40px;
+    }
+
+    #header-total {
+        padding: 0;
+    }
+
+    #HeaderBlackBar {
+        right: 15px;
+    }
+
+    .footerInfo {
+        padding-top: 10px;
+    }
+
+    .footerInfo,
+    .footerCopyright {
+        text-align: left;
+        color: #fff;
+    }
+
+    .Search-menu {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+@media (min-width: 992px)
+/* Medium devices (desktops) */
+
+    {
+
+    .logo-header,
+    .MenuBottom {
+        display: none;
+    }
+
+    #MenuBottom .navbar-left a {
+        margin-right: 30px;
+        padding: 0 0 8px 0;
+        color: rgb(25, 25, 25);
+        font-size: 1.15em;
+        font-weight: 400;
+    }
+
+    #menu-top a,
+    #MenuBottom a {
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: transparent;
+    }
+
+    #menu-top a:hover {
+        border-bottom-color: #e8e8e8;
+    }
+
+    #MenuBottom a:hover {
+        border-bottom-color: rgb(25, 25, 25);
+    }
+
+    #SearchBar {
+        display: none;
+    }
+
+    #SearchBar a {
+        color: #fff;
+    }
+
+    #SearchBar a:hover {
+        border-bottom: none;
+        text-decoration: underline;
+    }
+
+    .toolbar {
+        display: block;
+    }
+
+    .header-logo-top .img-logo,
+    .logo-header .sub-logo {
+        height: 115px;
+        margin: 10px 10px 10px 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #menu-top .navbar-right a {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 1199px) {
+    #menu-top .navbar-right a {
+        margin-left: 15px;
+        font-size: 0.85em;
+    }
+
+    #rowMenuBot .navbar-left a {
+        margin-right: 25px;
+    }
+
+    .toolbar {
+        font-size: 0.9em;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .header-title .CPic div {
+        max-height: 36px;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+/* PHẦN QUAS TRINH PHAT TRIEN */
+@media (min-width: 576px) {
+    #QuatrinhPhattrien {
+        background-color: rgba(19, 82, 162, 1);
+        -webkit-clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
+        clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+}

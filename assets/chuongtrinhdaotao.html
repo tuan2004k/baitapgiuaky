@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/ico" href="https://tuyensinh.lhu.edu.vn/ViewPage/LHUVNB4/_assets/favicon.ico?v1.1.2">
+    <title>Chương trình đào tạo</title>
+</head>
+<body>
+    <style>
+         .header{
+            height: 7.5vh;
+            width: 100vw;
+            display: flex;
+            background-color: #284F9E;
+            align-items: center;
+            justify-content: center;
+            padding-left: 160px;
+            font-size: small;
+            position: fixed;
+            z-index: 200;
+            margin: 0;
+            color: #fff;
+        }
+        .header>div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav{
+            display: flex;
+            list-style: none;
+        }
+        .nav a{
+            text-decoration: none;
+            margin: 10px;
+        } 
+        .nav a:hover{
+            padding-bottom: 4px;
+            border-bottom: solid 2px #fff;
+        }
+        .toolBar{
+            display: flex;
+
+        }
+        .toolBar a{
+            margin: 20px;
+            text-decoration: none;
+            padding-right: 28px;
+            border-right: solid 2px #fff
+        }
+        .toolBar :hover{
+            padding-bottom: 4px;
+            border-bottom: solid 2px #fff;
+
+        }
+
+        .nav-header{
+            width: 100vw;
+            height: 25vh;
+            display: flex;
+            padding: 64px;
+            position: fixed;
+            top: 40px;
+            background-color: #fff;
+            z-index: 150;
+        }
+        .header-logo img{
+            height: 108px;
+        }
+
+        .subnav-header a img{
+            height: 64px;
+        }
+
+        .nav-left{
+            display: flex;
+            list-style: none;
+            font-size: large;
+            position: absolute;
+            top: 124px;
+            left: 240px;
+        }
+        .nav-left a{
+            display: flex;
+            text-decoration: none;
+            margin: 10px;
+            z-index: 100;
+        }
+
+        .nav-left li :hover{
+            text-decoration: underline 2px;
+        }
+
+        .map{
+            height: 120px;
+            width: 55vw;
+            background-color: #F2F1EB;
+            position: relative;
+            top: 250px;
+            border-left: 0;
+            border-radius: 32px;
+        }
+
+        .mapname{
+            font-size: 32px;
+            margin-left: 40px;
+            display: flex;
+            padding-top: 12px;
+        }
+
+        .maprow{
+            display: flex;
+            
+        }
+        .maprow li{
+            list-style: none;
+        }
+
+        h1{
+            position: relative;
+            top: 300px;
+            color: #284F9E;
+        }
+        h1 i{
+            margin: 40px;
+        }
+
+        .textBox{
+            position: relative;
+            top: 280px;
+            margin: 40px;
+        }
+
+        .contentBox{
+            position: relative;
+            top: 300px;
+            width: 800px;   
+            height: 480px;
+            background-color: #F2F1EB;
+            display: flex;
+        }
+
+        .ctDH{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 650px;
+            height: 64px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 24px;
+            background-color:#ECC354;
+            top: 20px;
+            left: 0;
+            margin: 32px;
+            border-radius: 8px;
+        }
+        .ctDHlist{
+            list-style: none;
+        }
+        .ctDHlist a{
+            text-decoration: none;
+        }
+
+        .ctDHlist i{
+            margin: 10px;
+        }
+
+        .list{
+            display: flex;
+        }
+        .left p{
+            margin: 32px;
+        }
+
+        .right img{
+            height: 480px;
+            position: relative;
+            left: 32px;
+            top: 24px;
+            display: block;
+            box-shadow: 24px #000;
+        }
+
+        .infoLT{
+            position: relative;
+            width: 100vw;
+            height: 52vh;
+            background-color: #284F9E;
+            top: 400px;
+        }
+
+        .infoLT p{
+            position: relative;
+            top: 24px;
+            margin-left: 40px;
+            font-size: 16px;
+            color: #fff;
+            font-weight: lighter;
+            display: block;
+            width: 90vw;
+        }
+
+        .ctLT{
+            position: relative;
+            width: 90vw;
+            height: 64px;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            background-color: #ECC354;
+            color: #fff;
+            top: 24px;padding: 12px;
+            left: 40px;
+            border-radius: 4px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .col-list{
+            list-style: none;
+            display: flex;
+            color: #fff;
+            margin: 48px;
+        }
+
+        .col-list a{
+            text-decoration: none;
+        }
+
+        .row-list a:hover{
+            text-decoration: underline;
+        }
+        .col-list i{
+            font-size: 16px;
+            margin: 12px;
+        }
+        .row-list{
+            list-style: none;
+            margin: 12px;
+        }
+
+        .thongtin{
+            display: flex;
+            position: relative;
+            top: 360px;
+            list-style: none;
+            align-items: center;
+            color: #284F9E;
+        }
+        .thongtin li{
+            margin: 36px;
+            margin-right: 96px;
+            font-size: 18px;
+        }
+
+        .thongtin i{
+            font-size: 24px;
+            margin: 12px;
+        }
+        
+        .ketNoiHeader{
+            position: relative;
+            top: 400px;
+            display: flex;
+            margin: 36px;
+            color: #284F9E;
+        }
+
+        .ketNoiText{
+            font-size: 36px;
+            font-weight: 400;
+        }
+
+        .webButton{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 60px;
+        }
+
+        .webButton i{
+            font-size: 36px;
+            margin: 12px;
+        }
+        
+        .col-list1{
+            position: relative;
+            top: 360px;
+            color: #284F9E;
+            font-size: 18px;
+        }
+        .table {
+            display: flex;
+            list-style: none;
+        }
+
+        .col{
+            list-style: none;
+            margin: 36px;
+        }
+
+        .col a{
+            text-decoration: none;
+        }
+
+        .footer{
+            position: relative;
+            width: 100vw;
+            height: 36vh;
+            background-color: #284F9E;
+            display: flex;
+            top: 400px;
+        }
+
+        .col-lienlac{
+            list-style: none;
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+            margin-left: 24px;
+        }
+
+        .col-lienlac li{
+            margin: 10px;
+        }
+        .col-lienlac a{
+            text-decoration: none;
+        }
+
+        .col-lienlac a:hover{
+            text-decoration: underline;
+        }
+        .logo img{
+            width: 180px;
+            display: flex;
+            margin-top: 60px;
+            margin-left: 32px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col-more{
+            list-style: none;
+        }
+        .more{
+            
+        }
+
+        .solieu{
+            list-style: none;
+            color: #fff;
+            font-weight: 100;
+            display: flex;
+            margin: 48px;
+        }
+
+        .solieu i{
+            font-size: 24px;
+            margin: 12px;
+        }
+
+    </style>
+    <div class="header">
+        <div>
+            Thông tin cho:
+        </div>
+        <ul class="nav">
+            <li>
+                <a href="https://sinhvientuonglai.lhu.edu.vn/">Sinh viên tương lai</a>
+            </li>
+            <li>
+                <a href="https://sinhviendanghoc.lhu.edu.vn/">Sinh viên đang học</a>
+            </li>
+            <li>
+                <a href="https://phuhuynh.lhu.edu.vn/">Phụ huynh</a>
+            </li>
+            <li>
+                <a href="https://me.lhu.edu.vn/">Cán bộ và giảng viên</a>
+            </li>
+            <li>
+                <a href="https://cuusv.lhu.edu.vn/">Cựu sinh viên</a>
+            </li>
+        </ul>
+        <div class="toolBar">
+            <a href="https://en-tuyensinh.lhu.edu.vn/">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/gb.svg" alt="UK Flag" style="width:20px; height:15px; margin-right:5px; border: 0;">English</a>
+            <a href="https://me.lhu.edu.vn/">Trang cá nhân</a>
+            <a style="border: 0px;" href="https://lhu.edu.vn/search/?q=">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+    </div>
+    <div class="nav-header">
+        <div class="header-logo">
+            <a href="https://lhu.edu.vn/">
+                <img src="https://tuyensinh.lhu.edu.vn/ViewPage/LHUVNB4/_default/image/Logo_yellow.png" alt="">
+            </a>
+        </div>
+        <div class="subnav-header">
+            <a href="https://lhu.edu.vn/" style="height:60px;margin-bottom:10px;">
+                <img src="https://tuyensinh.lhu.edu.vn/ViewPage/LHUVNB4/_default/image/Text_logo.png" alt="">
+            </a>
+            <ul class="nav-left">
+                <li><a href="https://lhu.edu.vn/40/Gioi-thieu.html">Giới thiệu</a></li>
+                <li><a href="https://lhu.edu.vn/24/Chuong-trinh-dao-tao.html">Chương trình đào tạo</a></li>
+                <li><a href="https://tuyensinh.lhu.edu.vn/467/Cac-nganh-hoc.html">Tuyển sinh</a></li>
+                <li><a href="https://hocphilachonglhu.lhu.edu.vn/">Nghiên cứu</a></li>
+                <li><a href="https://sinhvientuonglai.lhu.edu.vn/">Liên hệ</a></li>
+            </ul>
+        </div>       
+    </div>   
+    <div class="map">
+        <div class="mapname">
+            Chương trình đào tạo
+        </div>
+        <div class="maplist">
+            <ul class="maprow">
+                <li>
+                    <a href="">Đại Học Lạc Hồng</a>
+                </li>
+                <li>
+                    >>
+                </li>
+                <li>
+                    Chương trình đào tạo
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h1>
+        <i class="fa-solid fa-stop"></i>Tại LHU, lựa chọn là của bạn!
+    </h1>
+    <div class="textBox">
+        <p>LHU tự hào với tỉ lệ 100% sinh viên tốt nghiệp có việc làm và hệ thống liên kết +1057 doanh nghiệp lớn nhỏ trong khu vực. Trường Đại học Lạc Hồng có lộ trình học quốc tế phù hợp cho sinh viên cả trong và ngoài nước. Trường cũng tập trung tiếp nhận và đào tạo các du học sinh về Việt Nam học tập.</p>
+        <p>Có rất nhiều con đường để đi tới thành công. LHU mang đến cho bạn nhiều lựa chọn đa dạng về chương trình tiết sĩ, thạc sĩ, cử nhân, liên thông, ... Tùy theo khả năng, sở thích cũng như định hướng tương lai của bạn. Hãy chọn cho mình con đường phù hợp nhất!</p>
+    </div>
+
+    <div class="contentBox">
+        <div class="left">
+            <div class="ctDH">
+                Chương trình đào tạo  ĐẠI HỌC
+            </div>
+            <p>Với quy mô đào tạo đa ngành, chương trình đào tạo đại học mang đến nhiều sự lựa chọn phong phú cho người học, đáp ứng nhu cầu tuyển dụng của toàn xã hội;</p>
+            <p>Chương trình đào tạo đại học hiện nay có các ngành:</p>
+            <div class="list">
+                <ul class="ctDHlist">
+                    <li><a href="https://lhu.edu.vn/106/47076/Quan-he-cong-chung.html"><i class="fa-solid fa-check"></i>Quan hệ công chúng</a></li>
+                    <li><a href="https://lhu.edu.vn/106/45278/Cong-nghe-ky-thuat-cong-trinh.html"><i class="fa-solid fa-check"></i>Công nghệ kỹ thuật công trình</a></li>
+                    <li><a href="https://lhu.edu.vn/106/45275/Tai-chinh-ngan-hang.html"><i class="fa-solid fa-check"></i>Tài chính ngân hàng</a></li>
+                    <li><a href="https://lhu.edu.vn/106/45273/Quan-tri-kinh-doanh.html"><i class="fa-solid fa-check"></i>Quản trị kinh doanh</a></li>   
+                    <li><a href="https://lhu.edu.vn/106/45271/Quan-tri-dich-vu-du-lich-lu-hanh.html"><i class="fa-solid fa-check"></i>Quản trị dịch vụ du lịch lữ hành</a></li>
+                </ul>
+                <ul class="ctDHlist">
+                    <li><a href="https://lhu.edu.vn/106/45279/Cong-nghe-thuc-pham.html"><i class="fa-solid fa-check"></i>Công nghệ thực phẩm</a></li>
+                    <li><a href="https://lhu.edu.vn/106/45276/Ke-toan-kiem-toan.html"><i class="fa-solid fa-check"></i>Kế toán - kiểm toán</a></li>
+                    <li><a href="https://lhu.edu.vn/106/45274/Marketing.html"><i class="fa-solid fa-check"></i>Marketing</a></li>
+                    <li><a href="https://lhu.edu.vn/106/45272/Luat-kinh-te.html"><i class="fa-solid fa-check"></i>Luật kinh tế</a></li>
+                    <li><a href="https://lhu.edu.vn/106/45270/Ngon-ngu-Anh.html"><i class="fa-solid fa-check"></i>Ngôn ngữ Anh</a></li>
+            </div>
+            </ul>
+        </div>
+        <div class="right">
+            <img src="https://lhu.edu.vn/ViewPage/LHUVNB4/ChuongTrinhDaoTao/_images/h1.jpg" alt="">
+        </div>
+    </div>
+    <div class="infoLT">
+        <div class="ctLT">
+            Chương trình đào tạo LIÊN THÔNG
+        </div>
+        <p>Chương trình liên thông với hình thức Xét tuyển theo bảng điểm kết quả học tập hệ trung cấp, cao đẳng đối với hệ liên thông; Xét tuyển thẳng đối tượng đã tốt nghiệp đại học đối với hệ Đại học văn bằng 2; Riêng ngành Dược thi tuyển theo đề thi của Trường Đại học Lạc Hồng. Chương trình đào tạo đa dạng mang đến nhiều sự lựa chọn phong phú cho người học với các ngành:</p>
+        <div class="list">
+            <ul class="col-list">
+                <li>
+                    <ul class="row-list">
+                        <li><a href=""><i class="fa-solid fa-check"></i>Khoa học môi trường</a></li>
+                        <li><a href=""><i class="fa-solid fa-check"></i>Quản trị kinh doanh</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="row-list">
+                        <li><a href=""><i class="fa-solid fa-check"></i>Xây dựng dân dụng và công nghiệp</a></li>
+                        <li><a href=""><i class="fa-solid fa-check"></i>Luật kinh tế</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="row-list">
+                        <li><a href=""><i class="fa-solid fa-check"></i>Tài chính ngân hàng</a></li>
+                        <li><a href=""><i class="fa-solid fa-check"></i>Ngôn ngữ Anh</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="row-list">
+                        <li><a href=""><i class="fa-solid fa-check"></i>Kế toán</a></li>
+                        <li><a href=""><i class="fa-solid fa-check"></i>Công nghệ thông tin</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="ketNoiHeader">
+        <div class="ketNoiText">
+            KẾT NỐI
+        </div>
+        <div class="webButton">
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+    <div class="col-list1">
+        <ul class="table">
+            <li>
+                <ul class="col">
+                    <li><a href="https://saudaihoc.lhu.edu.vn/">Khoa Sau đại học</a></li>
+                    <li><a href="https://duoc.lhu.edu.vn/">Khoa Dược</a></li>
+                    <li><a href="https://cs.lhu.edu.vn/">Khoa Công Nghệ Thông Tin</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="col">
+                    <li><a href="https://qt.lhu.edu.vn/">Khoa Quản trị - Kinh tế Quốc tế</a></li>
+                    <li><a href="https://tckt.lhu.edu.vn/">Khoa Tài Chính Kế Toán</a></li>
+                    <li><a href="https://ed.lhu.edu.vn/">Khoa Ngôn ngữ Anh</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="col">
+                    <li><a href="https://dangbo.lhu.edu.vn/">Đảng bộ</a></li>
+                    <li><a href="https://doanhoi.lhu.edu.vn/">Đoàn TN - Hội SV</a></li>
+                    <li><a href="https://congdoan.lhu.edu.vn/">Công đoàn cơ sở</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="col">
+                    <li><a href="https://swpea2023.lhu.edu.vn/">Hội nghị SWPEA2023</a></li>
+                    <li><a href="https://25nam.lhu.edu.vn/">Kỷ yếu 25 năm thành lập</a></li>
+                    <li><a href="https://tainguyen.lhu.edu.vn/">Tài nguyên học tập</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="logo">
+            <a href="https://lhu.edu.vn/"><img src="https://tuyensinh.lhu.edu.vn/ViewPage/LHUVNB4/_default/image/Logo_white_Vi.png" alt=""></a>
+        </div>
+        <div class="thongtinlienlac">
+            <ul class="col-lienlac">
+                <li>Điạ chỉ: Số 10, Huỳnh Văn Nghệ, P.Bửu Long, Tp. Biên Hòa - Tỉnh Đồng Nai</li>
+                <li>Điện thoại: <a href="tel: 0251 3952 778">0251 3952 778</a></li>
+                <li>Email: lachong@lhu.edu.vn</li>
+                <li><i class="fa-regular fa-copyright"></i>2023 Đại Học Lạc Hồng</li>
+            </ul>
+        </div>
+        <div class="more">
+            <ul class="col-more">
+                <li>
+                    <ul class="solieu">
+                        <li><i class="fa-solid fa-folder"></i>99999</li>
+                        <li><i class="fa-solid fa-chart-simple"></i>1/999</li>
+                    </ul>
+                </li>
+                <li><a href=""><img src="https://tuyensinh.lhu.edu.vn/ViewPage/LHUVNB4/_default/image/Me_80.png" style="border-radius: 8px; height: 60px;margin-left: 120px;margin-top: -36px;" alt=""></a></li>
+                <li>
+                    <a href="https://apps.apple.com/us/app/me-app/id1278107318?l=vi"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" style="margin-left: 88px;margin-top: 36px;" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
