@@ -1,18 +1,13 @@
 
-$(document).ready(function () {
-    $(window).scroll(function () {
-        var scrollPosition = $(window).scrollTop();
-
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("scroll", function() {
+        var scrollPosition = window.scrollY || window.pageYOffset;
         if (scrollPosition > 110) {
-            $('.text-logo').height(0);
-            $('.img-logo').height(40);
+            document.querySelector('.text-logo').style.height = '0';
+            document.querySelector('.img-logo').style.height = '40px';
         } else {
-            $('.text-logo').height(60);
-            $('.img-logo').height(115);
+            document.querySelector('.text-logo').style.height = '60px';
+            document.querySelector('.img-logo').style.height = '115px';
         }
     });
 });
-
-
-
-
